@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        body{
+            background-color: #fbf3f2;
+        }
+        .all {
+            margin-top: 100px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fbf3f2;
+        }
+        
+        .all {
+            background-color: #fbf3f2;
+            text-align: center;
+        }
+        
+        .all h1 {
+            font-size: 80px;
+            color: #032539;
+            transition: 0.5s;
+        }
+        
+        .all h1:hover {
+            -webkit-text-stroke: 2px #1C2833;
+            color: #fff;
+            border-color: #032539;
+        }
+        
+        .all a {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            font-size: 24px;
+            border: 2px solid #032539;
+            padding: 14px 30px;
+            border-radius: 50px;
+            margin-top: 80px;
+            background-color: #032539;
+            cursor: pointer;
+        }
+        
+        form .fakeupload input {
+            width: 200px;
+            height: 30px;
+            padding-right: 0px;
+            margin-top: 20px;
+            background: none;
+            border: 100px #000;
+            color: #032539;
+            font-family: Verdana, Geneva, sans-serif;
+            cursor: pointer;
+        }
+        
+        .submit {
+            font-size: 34px;
+        }
+        
+        nav {
+            width: 80%;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 8px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        nav .log {
+            width: 40px;
+        }
+        
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 17px;
+        }
+       
+        
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optical Scanner </title>
+</head>
+
+<body>
+     
+    <div id="particles-js" style="z-index: -1;"></div>
+    <nav>
+        <!--img src="logof.png" class="log">
+        <ul>
+            <li><a href="#" style="color:#2549D3">Home</a></li>
+            <li><a href="#" style="color:#2549D3">About</a></li>
+            <li><a href="#" style="color:#2549D3">Technology</a></li>
+            <li><a href="#" style="color:#2549D3">Contact</a></li>
+        </ul>
+    </nav-->
+        <div class="all">
+
+            <h1 style="font: size 30px">Optical Character Scanning </h1>
+            <form id="frmUploader" enctype="multipart/form-data" action="/upload" method="post">
+                <div class="fakeupload">
+                    <input type="file" name="image" /><i class="fa-fa arrow up"></i>
+                    <div class="inin">
+                        <input type="submit" name="submit" id="btnSubmit" value="Upload" />
+                    </div>
+                </div>
+            </form>
+            <!--a href="#">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">Go to Search-Bar</a-->
+
+
+            <script>
+            </script>
+        </div>
+        <script type="text/javascript" src="js/bot.js"></script>
+        <script type="text/javascript" src="js/voice.js"></script>
+        <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+        <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+        <script type="text/javascript" src="js/particle.js"></script>
+        <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    
+    
+    
+</body>
+
+</html>
