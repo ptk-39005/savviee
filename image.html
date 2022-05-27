@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Recognition</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fbf3f2;
+        }
+        
+        .content {
+            text-align: center;
+        }
+        
+        #img {
+            max-width: 600px;
+            margin: 50px 0;
+        }
+        
+        .form input {
+            height: 50px;
+            border-color: #032539;
+        }
+        
+        .form button {
+            border-radius: 10px;
+            width: 60px;
+            height: 50px;
+            padding: 0 10px;
+            border: none;
+            background: #032539;
+            color: white;
+            box-shadow: 2px solid #0f2980;
+        }
+        
+        .form button:hover {
+            background-color:#032539;
+            color: white;
+            border: black;
+            transform: 0.5s;
+        }
+        
+        .title h1 {
+            color: #032539;
+            padding-left: 30px;
+        }
+        
+        .title h1:hover {
+            -webkit-text-stroke: 2px #1C2833;
+            color: #032539;
+            border-color: #032539;
+            transform: 0.5s;
+        }
+        
+        .title1 h1 {
+            text-align: center;
+            color: #032539;
+            margin-top: 50px;
+            font-size: 50px;
+            transform: 0.5s;
+        }
+        
+        .title1 h1:hover {
+            -webkit-text-stroke: 2px #1C2833;
+            color: #2549D3;
+            border-color: #032539;
+            transform: 0.5s;
+        }
+        
+        .back button {
+           
+            margin-top: 150px;
+            width: 150px;
+            height: 50px;
+            margin-left: 330px;
+            border-radius: 30px;
+            background-color: #032539;
+            color: #fff;
+        }
+        
+        .back button:hover {
+            background-color:#0f2980;
+            color: black;
+            
+            transition: 0.5s;
+        }
+        
+        .instr {
+            margin-top: 35px;
+            margin-left: 830px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+
+        <h1>Savviee</h1>
+    </div>
+    <div class="title1">
+        <h1 style="padding:0px ;">Image Labeler<sub style="font-size:15px ;" style="color: #000; ">Upload & learn</sub></h1>
+    </div>
+
+    <div class="content">
+        <img id="img12" crossorigin="anonymous"></img>
+        <p id="prediction"></p>
+        <div class="form">
+            <input type="text" id="image_url">
+            <button id="submit_button">Go!</button>
+        </div>
+    </div>
+    <div class="instr">
+       <p >(paste image link)</p>
+    </div>
+    <div class="back">
+        <button class="btn"><a style="color:#fff ;" href="index.html">Home</a></button>
+        <button class="btn1"><a style="color:#fff ;" href="search.html">Search-Bar</a></button>
+        <button class="btn2"><a style="color:#fff ;" href="http://localhost:5000/" target="_blank">OCR</a></button>
+
+
+    </div>
+
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1">
+    </script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0">
+    </script>
+
+    <script src="image.js"></script>
+</body>
+
+</html>

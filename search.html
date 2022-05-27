@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="particle.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/key.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        var modal = document.getElementById('id01');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <style type="text/css">
+        a {
+            display: none;
+            list-style: none;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        body {
+            background-color: white;
+            font-family: 'Source Sans Pro', sans-serif;
+            letter-spacing: 1.2px;
+            color: black;
+        }
+        
+        #main {
+            font-family: 'Saira', sans-serif;
+            font-size: 85px;
+            text-align: center;
+            padding-top: 16%;
+            text-shadow: 4px 4px 2px rgba(150, 150, 149, 1);
+        }
+        
+        #formContent {
+            padding-top: 4%;
+            border-radius: 10px;
+        }
+        
+        #form {
+            margin-left: 32%;
+        }
+        
+        #puf {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        /* Center the image and position the close button */
+        
+        .imgcontainer {
+            text-align: center;
+            margin: 20px 0 10px 0;
+            position: relative;
+        }
+        
+        img.avatar {
+            width: 30%;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+        
+        .container {
+            margin-top: 0px;
+            padding: 16px;
+            padding-left: 20px;
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        /* Modal Content/Box */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 45%;
+            /* Could be more or less, depending on screen size */
+            height: 60%;
+        }
+        /* The Close Button (x) */
+        
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+        /* Add Zoom Animation */
+        
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+        
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+            position: relative;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        nav .log {
+            width: 80px;
+        }
+        
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+        }
+        
+        .content {
+            text-align: center;
+        }
+        
+        .content h1 {
+            font-size: 160px;
+            color: #fff;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+        
+        .content h1:hover {
+            -webkit-text-stroke: 2px #fff;
+            color: transparent;
+        }
+        
+        .content a {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            font-size: 24px;
+            border: 2px solid #fff;
+            padding: 14px 70px;
+            border-radius: 50px;
+            margin-top: 20px;
+        }
+        
+        
+       
+        
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        /* Change styles for span and cancel button on extra small screens */
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+        
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        
+        .redirect {
+            padding-top: 20px;
+            text-align: center;
+            align-items: center;
+        }
+        
+        .btn-default {
+            margin-top: -3px;
+            background-color: #032539;
+            color: #fff;
+            width: 80px;
+            height: 40px;
+            border-radius: 0px;
+            border-color: #032539;
+            border-radius: 50px;
+        }
+        
+        .btn-default:hover {
+            background-color:transparent;
+            color: #032539;
+            border-color: #050A30;
+        }
+        
+        .redirect h4 {
+            color: #2F2F2F;
+        }
+        
+        .btn-2 {
+            background-color: #032539;
+            color: #fff;
+            margin-top: 20px;
+            margin-left: 20px;
+            height: 70px;
+            width: 180px;
+            border-radius: 50px;
+            font-size: 20px;
+        }
+        .btn-2:hover{
+            background-color: transparent;
+            color: #032539;
+        }
+        
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        nav .log {
+            width: 80px;
+        }
+        
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="logof.png"  class="log">
+       
+    </nav>
+
+    <div id="particles-js" style="z-index: -1;"></div>
+    <div class="container">
+        <div class="row" id="mmm">
+            <h6 style="color:#032539 ;" id="main">Savviee!<sub style="font-size: 15px;" style="color:#0000FF ;">to infinity & beyond..</sub></h6>
+            <div id="formContent">
+                <form method="POST" id="form">
+                    <div class="row">
+                        <div class="col-lg-2 col-sm-12 col-xs-12"></div>
+                        <div class="col-lg-8 col-sm-12 col-xs-12" style="margin-left: -23%;">
+                            <input type="text" style="border-color:#032539 ;" class="form-control" name="message" placeholder="Ask me anything..." id="msg">
+                        </div>
+                        <!-- <div class="col-lg-2 col-sm-12 col-xs-12"></div> -->
+                        <div class="col-md-2 col-sm-12 col-xs-12">
+                            <button class="btn btn-default" id="buttons">ASK</button><br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2" style="text-align: center;margin-left: -2%;"></div>
+
+
+            <!--i data-toggle="modal" onclick="document.getElementById('id01').style.display='block'" class="fa fa-camera" aria-hidden="true" id="camera" style="color: black;font-size: 20px;text-align: center;"  data-placement="bottom" title="Upload a picture"></i-->&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            <i class="fa fa-microphone" aria-hidden="true" onclick="startDictation()" id="mic" style="color: black;font-size: 20px;text-align: center;padding-right: 10%;"></i>
+
+            <br><br>
+            <div>
+
+                <script type="text/javascript">
+                    function Redirect() {
+                        target = "_blank";
+                        window.location = "http://localhost:5000/";
+                    }
+                </script>
+                <div class="redirect">
+                    <h4>Too lazy to type? Use optical scanner to extract text.</h4>
+
+                    <form>
+                        <input class="btn-2" type="button" value="Optical scanner" onclick=" window.open( 'http://localhost:5000/', '_blank') " />
+                        <input class="btn-2" type="button" value="Home" onclick=" window.location.href='index.html'" />
+                        
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" id="fileform" action="" style="display: none;z-index: 10;margin-left: 20%;padding-top: 2%;text-align: center;">
+
+                    <div class="container">
+
+                        <input type="file" name="fileField" style="display: none;z-index: 10;margin-left: 20%;padding-top: 2%;text-align: center;" /><i class="fa fa-plus-circle" aria-hidden="true" style="color: #f0f0f0;font-size: 120px;text-align: center;padding-top: 2%;margin-left: 20%;z-index: 5;"></i><br>
+
+
+                    </div>
+
+                    <div class="container" style="padding-top: 10%;margin-left: 31%;padding-bottom: 10%;">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel btn btn btn-default" style="width: 100px;height: 50px;font-size: 20px;">Cancel</button>
+                        <input type="submit" name="submit" class="btn btn-success" value="SUBMIT" style="width: 100px;height: 50px;font-size: 20px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <br>
+    <img src="Spinner.svg" style="margin-left: 48%;margin-top: 5%;" id="puf">
+    <div class="row" style="width: 80%;margin-left: 20%;padding-top: 20%;">
+        <div class="col-lg-12" style="width: 80%;">
+            <div id="result" style="color: black;">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="js/bot.js"></script>
+    <script type="text/javascript" src="js/voice.js"></script>
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+    <script type="text/javascript" src="js/particle.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>

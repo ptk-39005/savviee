@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Us</title>
+    <style type="text/css">
+        body{
+            background-color: #fbf3f2;
+        }
+        
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        #main {
+            font-family: 'Saira', sans-serif;
+            font-size: 85px;
+            text-align: center;
+            padding-top: 16%;
+            text-shadow: 4px 4px 2px rgba(150, 150, 149, 1);
+        }
+        
+          
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        /* Modal Content/Box */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 45%;
+            /* Could be more or less, depending on screen size */
+            height: 60%;
+        }
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        /* Change styles for span and cancel button on extra small screens */
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+         .all{
+             text-align: justify;
+             margin-left: 200px;
+             
+         }
+       
+        h1 {
+            text-align: center;
+          
+            align-items: center;
+            color: #032539;
+            font-size: 55px;
+            padding-bottom: 30px;
+        }
+        
+        h1:hover {
+            color: #032539;
+            border: white;
+        }
+        
+        .info {
+            max-width: 75%;
+            border-color: #032539;
+            padding-left: 100px;
+            border-radius: 20px;
+        }
+        
+        .info h3 {
+            color: #002366;
+            font-size: 35px;
+            margin-left: 50px;
+        }
+        
+        .info p {
+            font-size: 16px;
+            color: #2f2f2f;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .info1 {
+            max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+        }
+        
+        .info1 p {
+            font-size: 16px;
+            color: #2f2f2f;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .info2 {
+            max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+        }
+        
+        .info2 p {
+            color: #2f2f2f;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+     .covered{
+        max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+     }
+     .covered p{
+        color: #2f2f2f;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+        
+        .info3 {
+            max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+            padding-top: 15px;
+        }
+        
+        .info3 a {
+            color: #2f2f2f;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .info4 {
+            max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+            padding-top: 15px;
+        }
+        
+        .info4 a {
+            color: #2f2f2f;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .info5 {
+            max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+            padding-top: 15px;
+        }
+        .info6{
+            max-width: 75%;
+            padding-left: 100px;
+            border-radius: 20px;
+            padding-top: 15px;
+        }
+        .info6 a{
+            color: #2f2f2f;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .info5 a {
+            color: #2f2f2f;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .back {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .back button {
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 510px;
+            width: 200px;
+            height: 75px;
+            border-radius: 50px;
+            background-color: #032539;
+            color: #fff;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        
+        .back a {
+            color: #fff;
+        }
+        
+        .back a:hover {
+            background-color: transparent;
+            color: black;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #particles-js{
+                height: 100%;
+                background: #fff;
+        }
+       
+    </style>
+</head>
+
+<body>
+  
+    
+
+
+    <h1>About Us</h1>
+    <div class="all">
+    <div class="info">
+        <h3>Computing Knowledge...</h3>
+        <p style="font-size:25px ;"> The development of <b>Savviee</b> is set to define a fundamentally new paradigm for gathering knowledge and answers to some of the most challenging arithmetic problems. Our mission is to curate all data, implement every known model, method and algorithm
+            and make it possible to present to you an in-depth analysis of whatever can be computed about just anything. Our work is built on the advancements of science and other systematisation of knowledge to provide a single source that can be relied
+            on for definitive answers to factual queries.
+        </p>
+    </div>
+    <div class="info1">
+        <p style="font-size:25px ;">We have set out to accept completely <b>free-form input</b> (e.g. use words like ‘integrate’ instead of the actual symbol) and serve as a knowledge engine that generates correct results and presents them with maximum clarity.
+        </p>
+    </div>
+    <div class="info2">
+        <p style="font-size:25px ;">But, we don’t just simply provide you with the answers; we try our best to give you the best searching experience. One of our key features is the <b>Voice Search</b>, to ease your search. Need to calculate ∫x²dx but don’t wish to type?
+        </p>
+    </div>
+    <div class="covered">
+       <p style="font-size:25px ;">No worries, we’ve got you covered.</p>
+    </div>
+    <div class="info3">
+        <a style="font-size:25px ;">Just order us to “Integrate x square” using the voice search feature, and we’ll be at your service.</a>
+    </div>
+    <div class="info4">
+        <a style="font-size:25px ;">Don’t wish to say it out loud? We have got covered there as well. Just provide our <b>Optical Scanner</b> with an image of the problem, and we’ll be at your disposal.
+        </a>
+    </div>
+    <div class="info5">
+        <a style="font-size:25px ;">
+            That is not all. We don’t provide you with only the answers; we provide you with the complete analysis to make you not just know but understand. Apart from mathematics, you can find any other information on Savvie as well. Just search and gain more knowledge! 
+
+
+        </a>
+    </div>
+<div class="info6">
+    <a>Moreover, if you don’t know what the thing in some image is, we are here to take care of that as well. Just use our <b>Image Labeler</b> and find out about the object in detail.
+        With the aim to ease your dealing with problems and struggle with gaining information, Savvie is present to your aid.</a>
+</div>
+
+    <div class="back">
+        <button><a style="font-size:20px ;" href="index.html">Back to Home</a></button>
+    </div>
+</div>
+</div>
+
+<script>
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+
+</script>
+
+
+<script type="text/javascript" src="js/bot.js"></script>
+<script type="text/javascript" src="js/voice.js"></script>
+<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+<script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+<script type="text/javascript" src="js/particle.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</body>
+
+</html>
