@@ -32,6 +32,10 @@ Install ExpressJs by using the command:
 ```bash
 npm install express
 ```
+Install multer by using the command:
+```bash
+npm install multer
+```
 Change the directory to repository folder using command prompt.
 Ensure that nothing is running on http://localhost:5000/
  Run the following command:
