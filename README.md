@@ -42,4 +42,4 @@ Ensure that nothing is running on http://localhost:5000/
  ```bash
 node server.js
 ```
-Open index.html in Google Chrome.
+Open the link https://sparkling-tiramisu-84dcc1.netlify.app/ in Google Chrome.
